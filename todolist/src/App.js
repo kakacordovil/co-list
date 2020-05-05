@@ -1,33 +1,23 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import TodoForm from './view/todoform';
 
-const App = ({addTodo}) => {
-  
-    let input;
+function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-         To Do List
+          Edit <code>src/App.js</code> and save to reload.
         </p>
-        <div>
-      <input ref={node => {
-        input = node;
-      }} />
-      <button onClick={() => {
-        addTodo(input.value);
-        input.value = '';
-      }}>
-        +
-      </button>
-    </div>
-  
+        <p>
+          <TodoForm />
+        </p>
+        
       </header>
     </div>
   );
 }
-
 
 export default App;
